@@ -1,7 +1,7 @@
 <?php
-
 include('header.php');
-include('oeuvres.php');
+include('mysql.php');
+include ('bdd.php');
 
 $id = $_GET['id'];
 $id = (int) $id;

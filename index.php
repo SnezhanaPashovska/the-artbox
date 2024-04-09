@@ -1,5 +1,6 @@
 <?php include('header.php'); 
-      include('oeuvres.php');  ?>
+      include('mysql.php');
+      include ('bdd.php');  ?>
 
         <div id="liste-oeuvres">
         <?php foreach ($oeuvres as $oeuvre): ?>
@@ -11,9 +12,6 @@
                 </a>
             </article>
            <?php endforeach ?>
-        
-
-           
         </div>
 
    <?php include('footer.php') ?>
