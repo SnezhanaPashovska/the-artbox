@@ -1,13 +1,13 @@
-<?php require ("./header.php"); ?>
+<?php require ("header.php"); ?>
 
 <form action="traitement.php" method="POST">
     <div class="champ-formulaire">
-        <label for="titre">Titre de l'œuvre</label>
-        <input type="text" name="titre" id="titre">
+        <label for="nom_oeuvre">Titre de l'œuvre</label>
+        <input type="text" name="nom_oeuvre" id="nom_oeuvre">
     </div>
     <div class="champ-formulaire">
-        <label for="artiste">Auteur de l'œuvre</label>
-        <input type="text" name="artiste" id="artiste">
+        <label for="author">Auteur de l'œuvre</label>
+        <input type="text" name="author" id="author">
     </div>
     <div class="champ-formulaire">
         <label for="image">URL de l'image</label>
@@ -21,4 +21,4 @@
     <input type="submit" value="Valider" name="submit">
 </form>
 
-<?php require ("./footer.php"); ?>
+<?php require ("footer.php"); ?>
