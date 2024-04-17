@@ -1,29 +1,30 @@
 <?php
-  include('mysql.php');
+
+
   include('bdd.php');
 
   $postOeuvre = $_POST;
 
   if (
-    empty($postOeuvre['nom_oeuvre'])
+    empty($postOeuvre['title'])
     || empty($postOeuvre['author'])
     || empty($postOeuvre['image'])
     || empty($postOeuvre['description'])
     || strlen($postOeuvre['description']) < 3
     || !filter_var($postOeuvre['image'], FILTER_VALIDATE_URL)){
-      header('Location: ajouter.php?erreur=true');
+      header('Location: index.php?erreur=true');
     }
   else {
-    $nom_oeuvre = htmlspecialchars(trim($postOeuvre['nom_oeuvre']));
+    $title = htmlspecialchars(trim($postOeuvre['title']));
     $author = htmlspecialchars(trim($postOeuvre['author']));
     $image = htmlspecialchars(trim($postOeuvre['image']));
     $description = htmlspecialchars(trim($postOeuvre['description']));
   }
 
   try { 
-    $insertOeuvre = $connexion->prepare('INSERT INTO oeuvres(nom_oeuvre, author, image, description) VALUE(:nom_oeuvre, :author, :image, :description)');
+    $insertOeuvre = $connexion->prepare('INSERT INTO oeuvres(title, author, image, description) VALUE(:title, :author, :image, :description)');
     $insertOeuvre->execute([
-      'nom_oeuvre' => $nom_oeuvre,
+      'title' => $title,
       'author' => $author,
       'image' => $image,
       'description' => $description,

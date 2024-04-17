@@ -2,8 +2,8 @@
 
 <form action="traitement.php" method="POST">
     <div class="champ-formulaire">
-        <label for="nom_oeuvre">Titre de l'œuvre</label>
-        <input type="text" name="nom_oeuvre" id="nom_oeuvre">
+        <label for="title">Titre de l'œuvre</label>
+        <input type="text" name="title" id="title">
     </div>
     <div class="champ-formulaire">
         <label for="author">Auteur de l'œuvre</label>

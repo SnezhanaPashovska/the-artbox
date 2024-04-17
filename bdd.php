@@ -1,4 +1,5 @@
 <?php
+include('mysql.php');
 
 try {
   $connexion = new PDO (
